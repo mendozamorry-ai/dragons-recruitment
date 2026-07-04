@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dragons Project — Business Opportunity</title>
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="🐉 Dragons Project — Extra Income Opportunity for Filipinos">
+<meta property="og:description" content="100% online. Flexible schedule. Meet Sir Mark Anthony Cruz live via Google Meet and discover how to build an additional income stream from home.">
+<meta property="og:image" content="https://mendozamorry-ai.github.io/Dragons-Project/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#FFD700;--orange:#FF6B00;--red:#CC1100;--dark:#080808;--card:#111}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:#fff;overflow-x:hidden}
+.pg{display:none}.pg.on{display:block;animation:fadeUp .5s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes glow{0%,100%{box-shadow:0 0 22px rgba(255,107,0,.5),0 0 44px rgba(255,107,0,.2)}50%{box-shadow:0 0 44px rgba(255,107,0,.85),0 0 88px rgba(255,107,0,.4)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes flicker{0%,100%{filter:brightness(1)}50%{filter:brightness(1.15)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+
+/* NAV DOTS */
+.nav{display:flex;justify-content:center;gap:10px;padding:16px;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+.dot{height:10px;border-radius:5px;background:#2a2a2a;transition:all .4s cubic-bezier(.4,0,.2,1)}
+.dot.on{width:32px;background:linear-gradient(90deg,#FF6B00,#FFD700);box-shadow:0 0 12px rgba(255,107,0,.6)}
+.dot.done{width:10px;background:rgba(255,107,0,.45)}
+.dot.off{width:10px}
+
+/* HEADER */
+.hdr{text-align:center;padding:40px 20px 10px;background:linear-gradient(180deg,rgba(90,10,0,.45) 0%,transparent 100%)}
+.logo{font-family:'Cinzel',serif;font-size:clamp(1.8rem,6vw,3.4rem);font-weight:900;letter-spacing:5px;background:linear-gradient(180deg,#FFE500 0%,#FF6B00 55%,#CC1100 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 16px rgba(255,100,0,.65));display:block;animation:flicker 3s ease-in-out infinite}
+.logo-sub{font-size:.7rem;letter-spacing:7px;color:#666;text-transform:uppercase;margin-top:5px}
+
+/* HERO */
+.hero{padding:50px 20px 40px;text-align:center;background:radial-gradient(ellipse 80% 55% at 50% 0%,rgba(130,22,0,.38) 0%,transparent 70%)}
+.tag{display:inline-block;background:linear-gradient(135deg,rgba(255,107,0,.14),rgba(200,30,0,.14));border:1px solid rgba(255,107,0,.38);color:#FF8C00;padding:7px 22px;border-radius:30px;font-size:.78rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
+.h1{font-family:'Cinzel',serif;font-size:clamp(1.5rem,5vw,2.8rem);font-weight:700;line-height:1.3;max-width:780px;margin:0 auto 18px}
+.h1 .acc{background:linear-gradient(90deg,#FFD700,#FF6B00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sub{font-size:clamp(.93rem,2.3vw,1.1rem);color:#bbb;max-width:600px;margin:0 auto 28px;line-height:1.8}
+
+/* FOUNDER CARD */
+.founder{max-width:760px;margin:0 auto 38px;background:linear-gradient(135deg,rgba(20,5,0,.95),rgba(30,8,0,.95));border:1px solid rgba(255,107,0,.28);border-radius:22px;overflow:hidden;position:relative;display:flex;gap:0}
+.founder::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#CC1100,#FFD700,#CC1100);z-index:2}
+.f-img-wrap{width:220px;min-width:220px;position:relative;overflow:hidden}
+.f-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.f-img-wrap::after{content:'';position:absolute;top:0;right:0;bottom:0;width:60px;background:linear-gradient(90deg,transparent,rgba(20,5,0,.95))}
+.f-body{padding:26px 26px 26px 18px;display:flex;flex-direction:column;justify-content:center;gap:12px;flex:1}
+.f-info h3{font-family:'Cinzel',serif;font-size:1.1rem;color:#FFD700}
+.f-info p{color:#888;font-size:.8rem;margin-top:3px}
+.f-quote{color:#ccc;font-size:.9rem;line-height:1.72;font-style:italic;border-left:3px solid rgba(255,107,0,.45);padding-left:13px}
+.tv-strip{display:flex;flex-wrap:wrap;gap:8px}
+.tv-pill{background:rgba(255,215,0,.07);border:1px solid rgba(255,215,0,.18);color:#ccc;padding:5px 13px;border-radius:20px;font-size:.75rem}
+.tv-pill span{color:#FFD700;font-weight:600}
+@media(max-width:580px){
+  .founder{flex-direction:column}
+  .f-img-wrap{width:100%;min-width:unset;height:280px}
+  .f-img-wrap::after{top:auto;right:0;left:0;bottom:0;height:60px;width:100%;background:linear-gradient(180deg,transparent,rgba(20,5,0,.95))}
+  .f-body{padding:20px}
+}
+
+/* PROOF BAR */
+.proof{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;padding:30px 20px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+.proof-item{text-align:center}
+.proof-item .num{font-family:'Cinzel',serif;font-size:1.6rem;font-weight:700;background:linear-gradient(90deg,#FFD700,#FF6B00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.proof-item .lbl{color:#777;font-size:.75rem;margin-top:3px}
+
+/* CTA BTN */
+.btn{display:inline-block;padding:16px 48px;background:linear-gradient(135deg,#FF8C00,#CC1100);color:#fff;font-size:1rem;font-weight:700;border-radius:50px;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:1.5px;animation:glow 2.2s ease-in-out infinite;transition:transform .2s;font-family:'Inter',sans-serif;text-decoration:none}
+.btn:hover{transform:translateY(-3px) scale(1.02)}.btn:active{transform:translateY(0)}
+.urg{color:#777;font-size:.79rem;margin-top:12px}
+
+/* SECTIONS */
+.sec{padding:58px 20px;max-width:980px;margin:0 auto}
+.sec-h{font-family:'Cinzel',serif;font-size:clamp(1.35rem,3.8vw,2.1rem);font-weight:700;text-align:center;margin-bottom:36px}
+.sec-h .acc{background:linear-gradient(90deg,#FFD700,#FF6B00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.step{background:var(--card);border:1px solid rgba(255,107,0,.14);border-radius:16px;padding:26px;text-align:center;position:relative;transition:all .3s}
+.step::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#CC1100,#FFD700);opacity:.6}
+.step:hover{border-color:rgba(255,107,0,.35);transform:translateY(-4px);box-shadow:0 12px 32px rgba(255,80,0,.1)}
+.step-num{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#FF6B00,#CC1100);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem;margin:0 auto 14px;box-shadow:0 0 16px rgba(255,80,0,.4)}
+.step h4{color:#FFD700;font-size:.95rem;margin-bottom:8px}
+.step p{color:#aaa;font-size:.87rem;line-height:1.65}
+
+/* FOR YOU */
+.fy-wrap{background:linear-gradient(180deg,#0d0000,#140300,#0d0000);padding:58px 20px}
+.fy-inner{max-width:860px;margin:0 auto}
+.fygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.fyrow{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:15px 17px;transition:all .3s}
+.fyrow:hover{background:rgba(255,107,0,.07);border-color:rgba(255,107,0,.22)}
+.chk{width:28px;height:28px;min-width:28px;background:linear-gradient(135deg,#FF6B00,#CC1100);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700}
+.fyrow span{color:#ddd;font-size:.9rem;line-height:1.4}
+
+/* TESTIMONIAL */
+.testi-wrap{padding:58px 20px;background:radial-gradient(ellipse at center,rgba(100,18,0,.2) 0%,transparent 70%)}
+.testi-inner{max-width:860px;margin:0 auto}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.tcard{background:var(--card);border:1px solid rgba(255,107,0,.14);border-radius:16px;padding:24px}
+.tcard .stars{color:#FFD700;font-size:.85rem;margin-bottom:10px}
+.tcard p{color:#ccc;font-size:.88rem;line-height:1.68;font-style:italic;margin-bottom:14px}
+.tcard .author{color:#FF8C00;font-size:.82rem;font-weight:600}
+.tcard .role{color:#555;font-size:.77rem}
+
+/* BOTTOM CTA */
+.btm-cta{text-align:center;padding:68px 20px;background:radial-gradient(ellipse at center,rgba(110,22,0,.32) 0%,transparent 68%)}
+.btm-cta h2{font-family:'Cinzel',serif;font-size:clamp(1.35rem,3.5vw,2rem);margin-bottom:12px}
+.btm-cta p{color:#bbb;max-width:480px;margin:0 auto 30px;line-height:1.72}
+
+/* PAGE 2: FORM */
+.fp-wrap{min-height:100vh;background:linear-gradient(180deg,#0d0000 0%,#090909 100%)}
+.fp-inner{max-width:560px;margin:0 auto;padding:48px 20px 60px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:none;color:#555;cursor:pointer;font-size:.87rem;padding:0;margin-bottom:26px;transition:color .2s;font-family:'Inter',sans-serif}
+.back-btn:hover{color:#aaa}
+.meet-box{background:linear-gradient(135deg,rgba(255,107,0,.09),rgba(200,30,0,.09));border:1px solid rgba(255,107,0,.25);border-radius:16px;padding:22px;text-align:center;margin-bottom:26px}
+.meet-box .mico{font-size:2rem}
+.meet-box h3{color:#FFD700;font-size:1rem;margin:8px 0 5px}
+.meet-box p{color:#ccc;font-size:.85rem;line-height:1.55}
+.fcard{background:var(--card);border:1px solid rgba(255,107,0,.2);border-radius:20px;padding:34px 28px}
+.fcard-h{font-family:'Cinzel',serif;font-size:1.28rem;text-align:center;margin-bottom:5px}
+.fcard-sub{color:#777;font-size:.85rem;text-align:center;margin-bottom:24px}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:.85rem;color:#ccc;font-weight:500;margin-bottom:6px}
+.fg input,.fg select{width:100%;padding:13px 16px;background:#1a1a1a;border:1px solid rgba(255,255,255,.1);border-radius:10px;color:#fff;font-size:.96rem;outline:none;transition:border-color .3s,box-shadow .3s;font-family:'Inter',sans-serif;-webkit-appearance:none}
+.fg select option{background:#1a1a1a}
+.fg input:focus,.fg select:focus{border-color:rgba(255,107,0,.5);box-shadow:0 0 0 3px rgba(255,107,0,.1)}
+.fg input::placeholder{color:#444}
+.fg input.err,.fg select.err{border-color:rgba(255,80,80,.5);box-shadow:0 0 0 3px rgba(255,80,80,.08)}
+.emsg{color:#ff7070;font-size:.75rem;margin-top:5px;display:none}
+.emsg.show{display:block}
+.disc{font-size:.72rem;color:#444;text-align:center;margin-top:15px;line-height:1.62;padding:0 4px}
+
+/* PAGE 3: THANK YOU */
+.ty-pg{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:radial-gradient(ellipse at center,rgba(85,16,0,.42) 0%,#080808 62%)}
+.ty-ico{font-size:4.5rem;animation:bob 2.6s ease-in-out infinite;margin-bottom:12px;display:block}
+.ty-card{max-width:520px;width:100%;background:var(--card);border:1px solid rgba(255,107,0,.24);border-radius:24px;padding:44px 34px;box-shadow:0 0 80px rgba(255,80,0,.07)}
+.ty-card h1{font-family:'Cinzel',serif;font-size:clamp(1.7rem,5vw,2.4rem);background:linear-gradient(90deg,#FFD700,#FF6B00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
+.ty-card>p{color:#bbb;line-height:1.77;margin-bottom:20px}
+.nxt{background:rgba(255,107,0,.07);border:1px solid rgba(255,107,0,.2);border-radius:14px;padding:20px;margin:16px 0 22px;text-align:left}
+.nxt h3{color:#FF8C00;font-size:.77rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.nxt p{color:#ccc;font-size:.9rem;line-height:1.62}
+.btn-meet{display:inline-flex;align-items:center;gap:9px;padding:15px 34px;background:linear-gradient(135deg,#34A853,#1E7E34);color:#fff;font-size:.95rem;font-weight:700;border-radius:50px;border:none;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:none;box-shadow:0 4px 22px rgba(52,168,83,.35);transition:transform .2s,box-shadow .2s;margin-bottom:14px;width:100%;justify-content:center}
+.btn-meet:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(52,168,83,.55)}
+.btn-fb{display:inline-flex;align-items:center;gap:9px;padding:14px 34px;background:linear-gradient(135deg,#1877F2,#0d5fb5);color:#fff;font-size:.93rem;font-weight:700;border-radius:50px;border:none;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:none;box-shadow:0 4px 22px rgba(24,119,242,.35);transition:transform .2s,box-shadow .2s;width:100%;justify-content:center}
+.btn-fb:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(24,119,242,.55)}
+.ty-footer{margin-top:22px;color:#444;font-size:.8rem}
+
+/* CANVAS */
+#fc{position:fixed;bottom:0;left:0;width:100%;height:120px;pointer-events:none;z-index:0;opacity:.4}
+
+.site-foot{text-align:center;padding:22px 20px;color:#272727;font-size:.74rem;border-top:1px solid #111}
+@media(max-width:560px){.fcard{padding:22px 15px}.ty-card{padding:32px 18px}.founder{padding:22px 18px}}
+</style>
+</head>
+<body>
+<canvas id="fc"></canvas>
+
+<!-- NAV DOTS -->
+<div class="nav">
+  <div class="dot on" id="d1"></div>
+  <div class="dot off" id="d2"></div>
+  <div class="dot off" id="d3"></div>
+</div>
+
+<!-- ======= PAGE 1: LANDING ======= -->
+<div class="pg on" id="pg1">
+
+  <div class="hdr">
+    <span class="logo">🐉 DRAGONS PROJECT</span>
+    <div class="logo-sub">Team Unbreakable Reapers</div>
+  </div>
+
+  <div class="hero">
+    <div class="tag">💼 Business Partnership Opportunity</div>
+    <h1 class="h1">Your Job Covers the Bills.<br><span class="acc">What If You Had Another Option?</span></h1>
+    <p class="sub">Thousands of Filipinos — employees, OFWs, students, and parents — are now building additional income online through the Dragons Project System. 100% online. Flexible schedule. No office required.</p>
+
+    <!-- FOUNDER CARD -->
+    <div class="founder">
+      <div class="f-img-wrap">
+        <img src="https://mendozamorry-ai.github.io/Dragons-Project/mark.jpg" alt="Mark Anthony Cruz — The Dragon" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div class="f-body">
+        <div class="f-info">
+          <h3>Mark Anthony Cruz</h3>
+          <p>Founder, Dragons Project · "The Dragon" · Tondo, Manila</p>
+        </div>
+        <p class="f-quote">"Nagsimula ako sa simpleng buhay sa Tondo. Ngayon, ang layunin ko ay tulungan ang mas maraming Pilipino na magkaroon ng sariling negosyo at makarating sa kanilang mga pangarap."</p>
+        <div class="tv-strip">
+          <div class="tv-pill">📺 <span>Kada Umaga</span></div>
+          <div class="tv-pill">📺 <span>Bernadeth Sembrano</span></div>
+          <div class="tv-pill">📺 <span>Julius Babao</span></div>
+          <div class="tv-pill">🏢 <span>100+ Offices PH & International</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn" style="cursor:pointer" onclick="goTo(2)">🐉 I Want to Learn More</div>
+    <div class="urg" style="margin-top:13px">⚡ Limited orientation slots available per week</div>
+  </div>
+
+  <!-- YOUTUBE VIDEO -->
+  <div style="max-width:700px;margin:0 auto 48px;padding:0 20px">
+    <div style="border-radius:18px;overflow:hidden;border:1.5px solid rgba(255,107,0,.25);box-shadow:0 0 55px rgba(200,30,0,.13);aspect-ratio:16/9;position:relative">
+      <iframe src="https://www.youtube.com/embed/p4OQshGB9Dk?autoplay=1&mute=1" title="Dragons Project Interview" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>
+    </div>
+    <p style="text-align:center;color:#666;font-size:.8rem;margin-top:10px">📺 Watch: Sir Mark Anthony Cruz — Dragons Project Interview</p>
+  </div>
+
+  <!-- PROOF BAR -->
+  <div class="proof">
+    <div class="proof-item"><div class="num">100%</div><div class="lbl">Online System</div></div>
+    <div class="proof-item"><div class="num">100+</div><div class="lbl">Offices in PH & Abroad</div></div>
+    <div class="proof-item"><div class="num">20 min</div><div class="lbl">Personal Orientation</div></div>
+    <div class="proof-item"><div class="num">3x</div><div class="lbl">Sessions Per Week</div></div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="sec">
+    <h2 class="sec-h">How It <span class="acc">Works</span></h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h4>Register Your Interest</h4><p>Fill out a short form so Sir Mark's team can prepare your personalized orientation session.</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Attend a 20-Min Orientation</h4><p>Meet Sir Mark live via Google Meet. He'll walk you through how the Dragons Project System works.</p></div>
+      <div class="step"><div class="step-num">3</div><h4>Decide for Yourself</h4><p>No pressure. After the orientation, ikaw pa rin ang magde-decide kung gusto mong sumali bilang partner.</p></div>
+      <div class="step"><div class="step-num">4</div><h4>Start Building Income</h4><p>Work at least 3 sessions a week, 20 minutes each — kahit nasa bahay ka, kahit OFW ka abroad.</p></div>
+    </div>
+  </div>
+
+  <!-- IS THIS FOR YOU -->
+  <div class="fy-wrap">
+    <div class="fy-inner">
+      <h2 class="sec-h">Who Is This <span class="acc">For?</span></h2>
+      <div class="fygrid">
+        <div class="fyrow"><div class="chk">✓</div><span>Employees looking for a side income</span></div>
+        <div class="fyrow"><div class="chk">✓</div><span>OFWs wanting income back home</span></div>
+        <div class="fyrow"><div class="chk">✓</div><span>Students building early financial habits</span></div>
+        <div class="fyrow"><div class="chk">✓</div><span>Parents needing flexible work hours</span></div>
+        <div class="fyrow"><div class="chk">✓</div><span>Business owners diversifying income</span></div>
+        <div class="fyrow"><div class="chk">✓</div><span>Anyone curious about online business</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AS SEEN IN MEDIA -->
+  <div style="padding:58px 20px;background:linear-gradient(180deg,#0a0000,#0d0000,#0a0000)">
+    <div style="max-width:980px;margin:0 auto">
+      <h2 class="sec-h">As <span class="acc">Featured In</span></h2>
+      <p style="text-align:center;color:#777;font-size:.9rem;margin:-22px auto 34px;max-width:520px">Sir Mark Anthony Cruz and Dragons Project have been covered by major Philippine media outlets</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px">
+
+        <!-- Daily Tribune -->
+        <div style="background:var(--card);border:1px solid rgba(255,107,0,.15);border-radius:18px;padding:26px;position:relative;overflow:hidden;transition:all .3s;display:flex;flex-direction:column;gap:14px" onmouseover="this.style.borderColor='rgba(255,107,0,.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,107,0,.15)';this.style.transform='translateY(0)'">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#CC1100,#FFD700);opacity:.6"></div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="background:rgba(255,215,0,.1);border:1px solid rgba(255,215,0,.2);border-radius:8px;padding:5px 12px;font-size:.75rem;font-weight:700;color:#FFD700;letter-spacing:1px">DAILY TRIBUNE</div>
+            <span style="color:#555;font-size:.75rem">May 22, 2026</span>
+          </div>
+          <p style="color:#e0e0e0;font-size:.93rem;font-weight:600;line-height:1.5">"From Tondo to Triumph: How Mark Anthony Cruz Empowers Dreamers"</p>
+          <p style="color:#888;font-size:.84rem;line-height:1.65">From delivering pork around Tondo's streets to leading one of the country's rising digital business communities — a story of grit, sacrifice, and purpose.</p>
+          <a href="https://tribune.net.ph/2026/05/22/from-tondo-to-triumph-how-mark-anthony-cruz-empowers-dreamers" target="_blank" style="display:inline-flex;align-items:center;gap:6px;color:#FF8C00;font-size:.82rem;font-weight:600;text-decoration:none;margin-top:auto;transition:color .2s" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='#FF8C00'">Read Full Article →</a>
+        </div>
+
+        <!-- ABS-CBN -->
+        <div style="background:var(--card);border:1px solid rgba(255,107,0,.15);border-radius:18px;padding:26px;position:relative;overflow:hidden;transition:all .3s;display:flex;flex-direction:column;gap:14px" onmouseover="this.style.borderColor='rgba(255,107,0,.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,107,0,.15)';this.style.transform='translateY(0)'">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#CC1100,#FFD700);opacity:.6"></div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="background:rgba(255,215,0,.1);border:1px solid rgba(255,215,0,.2);border-radius:8px;padding:5px 12px;font-size:.75rem;font-weight:700;color:#FFD700;letter-spacing:1px">ABS-CBN</div>
+            <span style="color:#555;font-size:.75rem">June 8, 2026</span>
+          </div>
+          <p style="color:#e0e0e0;font-size:.93rem;font-weight:600;line-height:1.5">"Mark Anthony Cruz Reflects on Success and His Wife's Brain Tumor"</p>
+          <p style="color:#888;font-size:.84rem;line-height:1.65">ABS-CBN Lifestyle features Sir Mark's incredible journey — from a low-income family near Tondo's railway tracks to becoming a successful entrepreneur and content creator.</p>
+          <a href="https://www.abs-cbn.com/lifestyle/people-culture-events/2026/6/8/content-creator-mark-anthony-cruz-reflects-on-success-wife-s-brain-tumor-1835" target="_blank" style="display:inline-flex;align-items:center;gap:6px;color:#FF8C00;font-size:.82rem;font-weight:600;text-decoration:none;margin-top:auto;transition:color .2s" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='#FF8C00'">Read Full Article →</a>
+        </div>
+
+        <!-- Random Republika -->
+        <div style="background:var(--card);border:1px solid rgba(255,107,0,.15);border-radius:18px;padding:26px;position:relative;overflow:hidden;transition:all .3s;display:flex;flex-direction:column;gap:14px" onmouseover="this.style.borderColor='rgba(255,107,0,.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,107,0,.15)';this.style.transform='translateY(0)'">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#CC1100,#FFD700);opacity:.6"></div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="background:rgba(255,215,0,.1);border:1px solid rgba(255,215,0,.2);border-radius:8px;padding:5px 12px;font-size:.75rem;font-weight:700;color:#FFD700;letter-spacing:1px">RANDOM REPUBLIKA</div>
+            <span style="color:#555;font-size:.75rem">June 3, 2026</span>
+          </div>
+          <p style="color:#e0e0e0;font-size:.93rem;font-weight:600;line-height:1.5">"This Boy is on Fire: Dragons Project Founder Reveals His Secret Weapon for Success"</p>
+          <p style="color:#888;font-size:.84rem;line-height:1.65">Operating in 60+ countries, Sir Mark built Dragons Project from semi-retirement — driven by a mission to empower Filipinos worldwide through digital entrepreneurship.</p>
+          <a href="https://randomrepublika.com/this-boy-is-on-fire-dragons-project-founder-mark-anthony-cruz-reveals-his-secret-weapon-for-success/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;color:#FF8C00;font-size:.82rem;font-weight:600;text-decoration:none;margin-top:auto;transition:color .2s" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='#FF8C00'">Read Full Article →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="testi-wrap">
+    <div class="testi-inner">
+      <h2 class="sec-h">What <span class="acc">Partners Say</span></h2>
+      <div class="tgrid">
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"Hindi ako naniniwala sa mga online na ganito dati. Pero nang makita ko si Sir Mark sa TV at nakapag-usap kami sa Google Meet, nabago ang tingin ko. Worth it ang orientation."</p>
+          <div class="author">Rica M.</div><div class="role">Call Center Agent, Quezon City</div>
+        </div>
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"OFW ako sa Dubai. Gusto kong may panggastos ang pamilya ko kahit hindi ko naipadala agad ang remittance. Ang Dragons Project ang natulong sa amin."</p>
+          <div class="author">Erick T.</div><div class="role">OFW, Dubai</div>
+        </div>
+        <div class="tcard">
+          <div class="stars">★★★★★</div>
+          <p>"Student pa lang ako pero nagsimula na ako. Kahit gaano ka-busy sa school, kaya mo pa rin dahil flexible ang schedule. Maraming salamat Sir Mark!"</p>
+          <div class="author">Janine R.</div><div class="role">College Student, Cebu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="btm-cta">
+    <h2>Ready to Meet <span style="background:linear-gradient(90deg,#FFD700,#FF6B00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Sir Mark?</span></h2>
+    <p>Schedule your free 20-minute personal orientation today. No commitment required — just come and listen.</p>
+    <button class="btn" onclick="goTo(2)">🐉 RESERVE MY ORIENTATION SLOT</button>
+    <div class="urg" style="margin-top:14px">⚡ Slots fill up fast — register now to secure yours</div>
+  </div>
+
+  <div class="site-foot">© 2026 Dragons Project · For educational purposes only · Results not guaranteed · Capital requirement: ₱15,000–₱16,000</div>
+</div>
+
+<!-- ======= PAGE 2: FORM ======= -->
+<div class="pg" id="pg2">
+  <div class="fp-wrap">
+    <div class="fp-inner">
+      <button class="back-btn" onclick="goTo(1)">← Back</button>
+
+      <div class="meet-box">
+        <div class="mico">📅</div>
+        <h3>Reserve Your Free 20-Min Orientation</h3>
+        <p>Meet Sir Mark Anthony Cruz live on Google Meet. He'll personally explain how the Dragons Project System works — no pressure, no commitment required.</p>
+      </div>
+
+      <div class="fcard">
+        <div class="fcard-h">Your Details</div>
+        <div class="fcard-sub">Fill in your information below to confirm your slot</div>
+
+        <div class="fg">
+          <label>Full Name *</label>
+          <input type="text" id="fname" placeholder="e.g. Juan dela Cruz">
+          <div class="emsg" id="e-fname">Please enter your full name.</div>
+        </div>
+        <div class="fg">
+          <label>Mobile Number *</label>
+          <input type="tel" id="fmobile" placeholder="e.g. 09XXXXXXXXX">
+          <div class="emsg" id="e-fmobile">Please enter a valid mobile number.</div>
+        </div>
+        <div class="fg">
+          <label>Facebook Profile Link *</label>
+          <input type="text" id="ffb" placeholder="e.g. facebook.com/yourname">
+          <div class="emsg" id="e-ffb">Please enter your Facebook profile link.</div>
+        </div>
+        <div class="fg">
+          <label>Email Address *</label>
+          <input type="email" id="femail" placeholder="e.g. juan@email.com">
+          <div class="emsg" id="e-femail">Please enter a valid email address.</div>
+        </div>
+        <div class="fg">
+          <label>Your Current Situation *</label>
+          <select id="fstatus">
+            <option value="" disabled selected>Select your status</option>
+            <option value="Employee">Employee</option>
+            <option value="OFW">OFW (Overseas Filipino Worker)</option>
+            <option value="Student">Student</option>
+            <option value="Business Owner">Business Owner</option>
+            <option value="Freelancer">Freelancer</option>
+            <option value="Parent / Homemaker">Parent / Homemaker</option>
+            <option value="Currently Unemployed">Currently Unemployed</option>
+          </select>
+          <div class="emsg" id="e-fstatus">Please select your current situation.</div>
+        </div>
+        <div class="fg">
+          <label>Preferred Orientation Time *</label>
+          <select id="ftime">
+            <option value="" disabled selected>Select preferred time slot</option>
+            <option value="1pm">A. 1:00 PM — 20 minutes</option>
+            <option value="5pm">B. 5:00 PM — 20 minutes</option>
+            <option value="8pm">C. 8:00 PM — 20 minutes</option>
+            <option value="10pm">D. 10:00 PM — 20 minutes</option>
+            <option value="12am">E. 12:00 AM — 20 minutes</option>
+          </select>
+          <div class="emsg" id="e-ftime">Please select your preferred time.</div>
+        </div>
+
+        <button class="btn" style="width:100%;text-align:center;margin-top:8px" onclick="submitForm()">📅 CONFIRM MY ORIENTATION SLOT</button>
+
+        <p class="disc">This is a free, no-obligation orientation. A starting capital of ₱15,000–₱16,000 is required to join as a business partner, but you are not required to commit during or after the orientation. Results vary depending on individual effort and consistency.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= PAGE 3: THANK YOU ======= -->
+<div class="pg" id="pg3">
+  <div class="ty-pg">
+    <span class="ty-ico">🎉</span>
+    <div class="ty-card">
+      <h1>You're Registered!</h1>
+      <p>Your orientation slot has been reserved. Sir Mark's team will reach out to confirm your Google Meet schedule. Make sure to check your messages!</p>
+
+      <div class="nxt">
+        <h3>👉 What Happens Next</h3>
+        <p>Join our official Dragons Project Messenger group to receive your Google Meet link, orientation reminders, and updates from Sir Mark's team.</p>
+      </div>
+
+      <a href="https://m.me/j/Abbo8geqNNAzdlrb/?send_source=gc%3Acopy_invite_link_t" target="_blank" class="btn-fb">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        JOIN THE MESSENGER GROUP
+      </a>
+
+      <div class="ty-footer">We look forward to seeing you inside the Dragons Project! 🐉<br>Team Unbreakable Reapers</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbxqzhh339ZsO2WjLAmplUxAkZU2s6lYqB695zWejtp0ITy_nuSEhGBl1rcQA3ZoEiWD/exec';
+
+function goTo(n){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.getElementById('pg'+n).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+  for(let i=1;i<=3;i++){
+    const d=document.getElementById('d'+i);
+    d.className='dot '+(i<n?'done':i===n?'on':'off');
+  }
+}
+
+function submitForm(){
+  const fields=[
+    {id:'fname',eid:'e-fname',ok:v=>v.trim().length>=2},
+    {id:'fmobile',eid:'e-fmobile',ok:v=>/^[0-9+\-\s]{7,15}$/.test(v.trim())},
+    {id:'ffb',eid:'e-ffb',ok:v=>v.trim().length>=5},
+    {id:'femail',eid:'e-femail',ok:v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())},
+    {id:'fstatus',eid:'e-fstatus',ok:v=>v.trim().length>0},
+    {id:'ftime',eid:'e-ftime',ok:v=>v.trim().length>0}
+  ];
+  let ok=true;
+  fields.forEach(f=>{
+    const inp=document.getElementById(f.id);
+    const em=document.getElementById(f.eid);
+    if(!f.ok(inp.value)){inp.classList.add('err');em.classList.add('show');ok=false}
+    else{inp.classList.remove('err');em.classList.remove('show')}
+  });
+  if(ok){
+    const btn=document.querySelector('#pg2 .btn');
+    btn.textContent='Submitting...';btn.style.opacity='.7';btn.disabled=true;
+    const params=new URLSearchParams({
+      name:document.getElementById('fname').value.trim(),
+      mobile:document.getElementById('fmobile').value.trim(),
+      facebook:document.getElementById('ffb').value.trim(),
+      email:document.getElementById('femail').value.trim(),
+      status:document.getElementById('fstatus').value,
+      time:document.getElementById('ftime').value
+    });
+    fetch(`${SCRIPT_URL}?${params}`,{mode:'no-cors'})
+      .catch(()=>{})
+      .finally(()=>goTo(3));
+  }
+}
+
+['fname','fmobile','ffb','femail','fstatus','ftime'].forEach(id=>{
+  document.getElementById(id).addEventListener('change',function(){
+    this.classList.remove('err');
+    document.getElementById('e-'+id).classList.remove('show');
+  });
+  const el=document.getElementById(id);
+  if(el.tagName==='INPUT') el.addEventListener('input',function(){
+    this.classList.remove('err');
+    document.getElementById('e-'+id).classList.remove('show');
+  });
+});
+
+// Fire canvas
+const cv=document.getElementById('fc'),cx=cv.getContext('2d');
+function resize(){cv.width=window.innerWidth;cv.height=120}
+resize();window.addEventListener('resize',resize);
+const pts=[];
+class P{
+  constructor(){this.reset()}
+  reset(){this.x=Math.random()*cv.width;this.y=cv.height+10;this.s=Math.random()*4+1.5;this.vy=Math.random()*1.5+.8;this.vx=(Math.random()-.5)*.8;this.a=1;this.da=Math.random()*.015+.008;this.g=Math.round(Math.random()*180)}
+  step(){this.x+=this.vx;this.y-=this.vy;this.a-=this.da;this.s*=.993;if(this.a<=0||this.s<.3)this.reset()}
+  draw(){cx.save();cx.globalAlpha=this.a*.6;const g=cx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.s);g.addColorStop(0,`rgba(255,${this.g},0,1)`);g.addColorStop(1,`rgba(200,0,0,0)`);cx.fillStyle=g;cx.beginPath();cx.arc(this.x,this.y,this.s,0,Math.PI*2);cx.fill();cx.restore()}
+}
+for(let i=0;i<85;i++){const p=new P();p.a=Math.random();p.y=Math.random()*cv.height;pts.push(p)}
+(function loop(){cx.clearRect(0,0,cv.width,cv.height);pts.forEach(p=>{p.step();p.draw()});requestAnimationFrame(loop)})();
+</script>
+</body>
+</html>
